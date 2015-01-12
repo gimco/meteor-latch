@@ -1,5 +1,5 @@
 Package.describe({
-  name: 'latch',
+  name: 'gimco:latch',
   summary: 'Protect user accounts with Latch service',
   version: '1.0.0',
   git: 'https://github.com/gimco/meteor-latch'
