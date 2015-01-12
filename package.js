@@ -16,7 +16,7 @@ Package.onUse(function(api) {
   api.use('underscore');
   api.use('http', 'server');
   api.use('accounts-base');
-  api.use('momentjs:moment', 'server');
+  api.use('momentjs:moment@2.8.4', 'server');
   api.use('service-configuration', 'server');
 
   api.addFiles('latch-common.js', ['client', 'server']);
