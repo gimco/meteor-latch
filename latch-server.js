@@ -151,7 +151,6 @@ Meteor.methods({
     _latchUnpair: Latch.unpair
 });
 
-Accounts.addAutopublishFields({forLoggedInUser:['latch']});
 Accounts.validateLoginAttempt(function (attempt) {
     if (!attempt.user || !attempt.user.latch) {
         return true;
@@ -161,4 +160,12 @@ Accounts.validateLoginAttempt(function (attempt) {
         throw new Meteor.Error(403, 'Account is locked');
     }
     return true;
+});
+// Accounts.addAutopublishFields({forLoggedInUser:['latch']});
+Meteor.publish("_latchField", function () {
+  if (this.userId) {
+    return Meteor.users.find({_id: this.userId}, {fields: {'latch': 1}});
+  } else {
+    this.ready();
+  }
 });
