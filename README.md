@@ -2,6 +2,23 @@
 
 It is a package that integrates the Latch service with Meteor framework, allowing users to easily protect theirs own accounts.
 
+# Table of Contents
+
+- [Description](#)
+- [Quick start](#)
+- [Installation](#)
+- [Configuration](#)
+- [Integration](#)
+- [API](#)
+  - [Latch.isPaired()](#)
+  - [Latch.isLocked()](#)
+  - [Latch.pair(token)](#)
+  - [Latch.unpair()](#)
+- [Integration with accounts-ui and Bootstrap](#)
+- [Low level data on MongoDB](#)
+  - [Data for service configuration](#)
+  - [Data for the users](#)
+
 # Description
 
 Meteor is an ultra-simple environment for building modern web applications. It is a framework that allows the creation of real-time applications extremely fast.
