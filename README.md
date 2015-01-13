@@ -22,15 +22,15 @@ meteor add gimco:accounts-ui-latch
 
 The first time the package is added, you can configure the Latch service, so you must read the configuration instructions shown:
 
-![XXX]()
+![Adding the package](https://raw.githubusercontent.com/gimco/meteor-latch/master/docs/01-adding-package.gif)
 
 From this moment, the users will can pair his accounts with Latch, so after they have logged in, they can select the pair with Latch option:
 
-![XXX]()
+![Pairing account](https://raw.githubusercontent.com/gimco/meteor-latch/master/docs/02-pair-account.gif)
 
 Once pair the account with Latch, the user must use the mobile application to enable the possibility of logging in on the web site:
 
-![XXX]()
+![Login](https://raw.githubusercontent.com/gimco/meteor-latch/master/docs/03-login-account.gif)
 
 # Installation
 
@@ -40,7 +40,7 @@ To integrate Latch with your Meteor application only is needed add the `gimo:lat
 meteor add gimco:latch
 ~~~
 
-If you use the `accounts-ui` package, you should use the optional `gimco:accounts-ui-latch` package, which add simple UI to configure and activate Latch:
+If you use the `accounts-ui` or `ian:accounts-ui-bootstrap-3` packages, you should use the optional `gimco:accounts-ui-latch` or `gimco:accounts-ui-bootstrap-3-latch` packages respectively, which add simple UI to configure and activate Latch:
 
 ~~~
 meteor add gimco:accounts-ui-latch
@@ -48,7 +48,7 @@ meteor add gimco:accounts-ui-latch
 
 # Configuration
 
-Before users can protect their accounts with Latch, we must properly configure the Lath service. If you use the `accounts-ui` and the `gimco:accounts-ui-latch` packages, then you can configure the Latch service the first time you add the package using the configuration screen.
+Before users can protect their accounts with Latch, we must properly configure the Lath service. If you use the `accounts-ui` and the `gimco:accounts-ui-latch` packages (or the corresponding bootstrap versions), then you can configure the Latch service the first time you add the package using the configuration screen.
 
 But the recommended way is configure Latch service using the `service-configuration` package, so you must execute the next lines inside a `Meteor.startup` block on the server side:
 
@@ -92,9 +92,9 @@ This method is used to pair the authenticated user with the Latch service. The f
 
 This unpair the user in Lath service and remove any information related to Latch. After this call the reactive data source `Latch.isPaired` is modified.
 
-# Integration with accounts-ui
+# Integration with accounts-ui and Bootstrap
 
-In the case of using the `accounts-ui` package you can use the optional `accounts-ui-latch` package, which extends different templates to add Latch options in the login dropdown. To add this package simply run the following command on the Meteor project:
+In the case of using the `accounts-ui` package you can use the optional `gimco:accounts-ui-latch` package, which extends different templates to add Latch options in the login dropdown. Alternatively, if you use Bootstrap with the `ian:accounts-ui-bootstrap-3` you can use the `gimco:accounts-ui-bootstrap-3-latch`. To add this package simply run the following command on the Meteor project:
 
 ~~~~
 meteor add gimco:accounts-ui-latch
@@ -116,7 +116,7 @@ This section will show you the real data inserted in the MongoDB collections rel
 
 ## Data for service configuration
 
-When you configure the Latch service, whether using the UI provided for the `gimco:accounts-ui-latch` package or calling to `ServiceConfiguration.configurations.insert`, both options will end by inserting a JSON object in the Meteor collection for the login services, the `meteor_accounts_loginServiceConfiguration` collection. See below a mongo session example to examine the data saved for the Latch service:
+When you configure the Latch service, whether using the UI provided for the `gimco:accounts-ui-latch` package (or `gimco:accounts-ui-bootstrap-3-latch`) or calling to `ServiceConfiguration.configurations.insert`, both options will end by inserting a JSON object in the Meteor collection for the login services, the `meteor_accounts_loginServiceConfiguration` collection. See below a mongo session example to examine the data saved for the Latch service:
 
 ~~~
 $ meteor mongo

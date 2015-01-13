@@ -22,15 +22,15 @@ meteor add gimco:accounts-ui-latch
 
 La primera vez que se agrega el paquete podrás configurar el servicio, para ello debes seguir las instrucciones indicadas:
 
-![gif animado configurando el servicio]()
+![Añadir paquete](https://raw.githubusercontent.com/gimco/meteor-latch/master/docs/01-adding-package.gif)
 
 Desde este momento los usuarios podrán asociar su cuenta con Latch, para ello una vez autenticados podrán seleccionar la opción de parear con el servicio de Latch:
 
-![gif animado mostrando como un usuario asociado latch]()
+![Enparejar cuenta](https://raw.githubusercontent.com/gimco/meteor-latch/master/docs/02-pair-account.gif)
 
 Una vez asociado el usuario deberá activar el uso de la cuenta antes de poder logarse en el servicio:
 
-![gif animado de usuario usando su aplicación android]()
+![Autenticandonos](https://raw.githubusercontent.com/gimco/meteor-latch/master/docs/03-login-account.gif)
 
 # Instalación
 
