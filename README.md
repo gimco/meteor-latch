@@ -4,20 +4,20 @@ It is a package that integrates the Latch service with Meteor framework, allowin
 
 # Table of Contents
 
-- [Description](#)
-- [Quick start](#)
-- [Installation](#)
-- [Configuration](#)
-- [Integration](#)
-- [API](#)
-  - [Latch.isPaired()](#)
-  - [Latch.isLocked()](#)
-  - [Latch.pair(token)](#)
-  - [Latch.unpair()](#)
-- [Integration with accounts-ui and Bootstrap](#)
-- [Low level data on MongoDB](#)
-  - [Data for service configuration](#)
-  - [Data for the users](#)
+- [Description](#description)
+- [Quick start](#quick-start)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Integration](#integration)
+- [API](#api)
+  - [Latch.isPaired()](#latchispaired)
+  - [Latch.isLocked()](#latchislocked)
+  - [Latch.pair(token)](#latchpairtoken)
+  - [Latch.unpair()](#latchunpair)
+- [Integration with accounts-ui and Bootstrap](#integration-with-accounts-ui-and-bootstrap)
+- [Low level data on MongoDB](#low-level-data-on-mongodb)
+  - [Data for service configuration](#data-for-service-configuration)
+  - [Data for the users](#data-for-the-users)
 
 # Description
 
